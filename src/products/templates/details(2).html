@@ -1,0 +1,17 @@
+<title>Product Details via Dyanamic URL Lookup</title>
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Product Details</h1>
+
+Name - {{object.title}} </br>
+Price - {{object.price}} </br>
+Description - {{object.description}} 
+
+<form method='POST'> {% csrf_token %}
+<h2>Do You want to delete this Product?</h2>
+<input type='submit' value='Yes'/>
+</form>
+{# submits an empty form queryset as a post request #}
+{% endblock content %}
+

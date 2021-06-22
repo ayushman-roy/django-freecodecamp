@@ -1,0 +1,19 @@
+<title> Product Form </title>
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method='POST'> {% csrf_token %}
+{{ form.as_p }} 
+<input type='submit' value='Save'/>
+</form>
+
+{% endblock content %}
+
+{% comment %}
+The method='POST' is used to generate a POST HTTP request. 
+CSRF token is generated for security purposes.
+The form.as_p renders the form as HTML using paragraph tags.
+Once the user submits, the data is POSTED to the database.
+{% endcomment %}

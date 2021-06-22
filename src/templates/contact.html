@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> this is a contact page </h1>
+    {{ request.user }}
+
+{% endblock content %}
+
+{% block content2 %}
+
+<h1>This is a second block!</h1>
+<p> paragraph here! </p>
+
+{% endblock content2 %}
+
+<!--The file inherits from base.html, via the extends tag, where all main and reusable code is stored.
+    Only specific codes are implemented here using the block tag.
+-->

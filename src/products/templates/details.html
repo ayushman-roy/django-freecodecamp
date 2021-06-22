@@ -1,0 +1,30 @@
+<title>Product Details Page </title>
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> {{ object.title }} </h1>
+
+Price : {{ object.price | add:-3 }} <br>
+{% comment %} 
+Somehow the add filter for float is not working.
+No solution on stackoverflow.
+{% endcomment %}
+
+Description :
+{% if description != None and ''%}
+{{object.description}}
+{% else %} No description available.
+{% endif %}
+
+{% endblock content %}
+
+
+
+{% comment %} 
+Template Hierarchy -
+All templates in the filesystem.Loader assigned path (settings.py), will override every other template location.
+When you are making apps, make sure to keep the templates related to each app, in the templates folder of the app itself.
+It is done for code maintanence and reusablity purposes.
+{% endcomment %}

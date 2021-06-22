@@ -1,0 +1,21 @@
+<title>Product Home</title>
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>List of Products</h1>
+
+{% for instance in object_list %}
+<p>
+{{instance.id}} - <a href={{instance.get_absolute_url}}> {{instance.title}} </a>
+</p>
+{% endfor %}
+
+{% endblock content %}
+
+{% comment %}
+for loop is used to iterate through the queryset list from the view function, which lists all instances of the model.
+it then prints the id of each instance along with its title, inside the for loop.
+it also links each product's detail page to its title via the get_absolute_url function as defined in models.py 
+{% endcomment %}

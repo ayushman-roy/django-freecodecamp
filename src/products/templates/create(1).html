@@ -1,0 +1,21 @@
+<title> Product Form via HTML only</title>
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method='POST' id='productform'> {% csrf_token %}
+    Title: <input type='text' maxlength='30' name='title' placeholder='Title'/> <br/><br/>
+    Price: <input type='number' name='price' placeholder='Price'/> <br/><br/>
+    Description: <textarea name='description'form='productform'> Enter Description  </textarea>
+    <input type='submit' value='Save'/>
+</form>
+
+
+{% endblock content %}
+
+<!--
+    The form uses the POST method to POST data to the target, in this case the same page.
+    It takes input of title, price and description. CSRF token for security.
+    No Django is used here.
+-->

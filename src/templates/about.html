@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>this is the about page</h1>
+<h2> {{ myTitle | title  }} </h2>
+
+<p>
+{{ myText }} <br>
+{{ myNumber | add:23 }} <br>
+{{ myList }}
+</p>
+
+<ul>
+{% if myValue%}
+    {% for myItem in myList %}
+    {% if myItem == False %}
+    <li> This is False </li>
+    {% elif myItem == 'pizza' %}
+    <li> I want a Pizza! </li>
+    {% else %}
+    <li> {{ forloop.counter }} - {{ myItem }} </li>
+    {% endif %}
+    {% endfor %}
+{% endif %}
+</ul>
+
+<p> 
+{{ Item0 }}
+{{ Item1 }}
+{{ Item2 }}
+{{ Item3 }}
+</p>
+
+{% endblock content %}
+
+{% comment %}
+    
+    NOTES -
+    Always use {{% xyz %}} for commands, where xyz is the command. Do not forget to close the command.
+    | - are called filters and the essentially modify/format the content variable passed.
+    Content of type {{ abc }} are usually filter-able.  
+    Item0, etc - are content variables (Dict Keys), created as a result of the for loop implemented in views.py file.
+    
+{% endcomment %}
