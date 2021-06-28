@@ -8,13 +8,13 @@ This is just a simple web application made with Django as the backend technology
 + Django - v3.2.4 
 
 ## Usage 
-To access the project, first activate the virtual envirnoment and install django using the command line. \
+To access the project, first activate the virtual environment and install django using the command line in the base directory. \
 
 `scripts\activate` \
-Activates Virtual Environment \
+Activates Virtual Environment 
 
 `python -m pip install Django` \
-Install Django in your Virtual Environment \
+Install Django in your Virtual Environment 
 
 To access the Admin app, username - user and password - superlad123 \
 A VS code workspace is inbuilt into the project. 
