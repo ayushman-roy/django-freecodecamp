@@ -19,4 +19,5 @@ Install Django in your Virtual Environment
 To access the Admin application
 + Username - user 
 + Password - superlad123 
-A VS code workspace is inbuilt into the project. 
+
+A VS code workspace is inbuilt into the project.
