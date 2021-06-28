@@ -16,5 +16,7 @@ Activates Virtual Environment
 `python -m pip install Django` \
 Install Django in your Virtual Environment 
 
-To access the Admin app, username - user and password - superlad123 \
+To access the Admin application
++ Username - user 
++ Password - superlad123 
 A VS code workspace is inbuilt into the project. 
